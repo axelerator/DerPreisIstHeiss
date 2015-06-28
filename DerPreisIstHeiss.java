@@ -12,6 +12,10 @@ class DerPreisIstHeiss {
     public String toString() {
       return amount + " €";
     }
+
+    public boolean equals(Object other) {
+      return other.amount == this.amount;
+    }
   }
 
 
