@@ -21,7 +21,8 @@ class DerPreisIstHeiss {
 
     public boolean equals(Object other) {
       return (other instanceof Price)
-        && ((Price)other).amount == this.amount;
+        && ((Price)other).amount == this.amount
+        && ((Price)other).currency == this.currency;
     }
 
     public Price sum(Price other) {
@@ -46,6 +47,6 @@ class DerPreisIstHeiss {
 Ausgabe:
 ========
 ```
-1.00 € equals 1.00 $: true
+1.00 € equals 1.00 $: false
 1.00 € + 1.00 $= 2.00 €
 ```

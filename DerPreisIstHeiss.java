@@ -20,7 +20,8 @@ class DerPreisIstHeiss {
 
     public boolean equals(Object other) {
       return (other instanceof Price)
-        && ((Price)other).amount == this.amount;
+        && ((Price)other).amount == this.amount
+        && ((Price)other).currency == this.currency;
     }
 
     public Price sum(Price other) {
