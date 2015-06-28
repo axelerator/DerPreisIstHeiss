@@ -5,6 +5,10 @@ import java.util.ArrayList;
 class DerPreisIstHeiss {
   static class Price {
     float amount;
+
+    public String toString() {
+      return amount + " €";
+    }
   }
 
 
@@ -26,4 +30,4 @@ class DerPreisIstHeiss {
 ```
 Ausgabe:
 ========
-DerPreisIstHeiss$Price@7852e922 ist nicht gleich DerPreisIstHeiss$Price@4e25154f
+23.0 € ist nicht gleich 23.0 €

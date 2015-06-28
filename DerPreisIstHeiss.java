@@ -4,6 +4,10 @@ import java.util.ArrayList;
 class DerPreisIstHeiss {
   static class Price {
     float amount;
+
+    public String toString() {
+      return amount + " €";
+    }
   }
 
 
