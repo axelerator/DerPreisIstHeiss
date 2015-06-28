@@ -3,14 +3,15 @@ import java.util.ArrayList;
 
 class DerPreisIstHeiss {
   static class Price {
-    private float amount;
+    private long amount;
 
-    Price(float amount) {
+    Price(long amount) {
       this.amount = amount;
     }
 
     public String toString() {
-      return amount + " €";
+      long cents = amount % 100;
+      return (amount / 100) + "." + (cents < 10 ? "0" + cents :  cents) + " €";
     }
 
     public boolean equals(Object other) {
@@ -26,8 +27,8 @@ class DerPreisIstHeiss {
 
   public static void main(String[] args) {
 
-    Price p1 = new Price(230000.01f);
-    Price p2 = new Price(230000.01f);
+    Price p1 = new Price(23000001);
+    Price p2 = new Price(23000001);
 
     Price p3 = p1.sum(p2);
     System.out.println(p3);
