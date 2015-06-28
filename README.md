@@ -32,19 +32,20 @@ class DerPreisIstHeiss {
 
   public static void main(String[] args) {
 
-    Price euro1 = new Price(23000001, '€');
-    Price euro2 = new Price(23000001, '€');
+    Price oneEuro = new Price(100, '€');
+    Price oneDollar = new Price(100, '$');
 
-    Price euro3 = euro1.sum(euro2);
-    System.out.println(euro3);
+    Price deuro = oneEuro.sum(oneDollar);
 
-    System.out.println(new Price(4200, '$'));
+    System.out.println(oneEuro + " equals " + oneDollar + ": " + oneEuro.equals(oneDollar));
+    System.out.println(oneEuro + " + " + oneDollar + "= " + deuro);
+
   }
 }
 ```
 Ausgabe:
 ========
 ```
-460000.02 €
-42.00 $
+1.00 € equals 1.00 $: true
+1.00 € + 1.00 $= 2.00 €
 ```
