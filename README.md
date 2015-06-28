@@ -26,14 +26,12 @@ class DerPreisIstHeiss {
     Price p1 = new Price(23.0f);
     Price p2 = new Price(23.0f);
 
-    if (p1.equals(p2)) {
-      System.out.println(p1 + " ist gleich " + p2);
-    } else {
-      System.out.println(p1 + " ist nicht gleich " + p2);
-    }
+    Price p3 = new Price(p1.amount + p2.amount);
+    System.out.println(p3);
+
   }
 }
 ```
 Ausgabe:
 ========
-23.0 € ist gleich 23.0 €
+46.0 €
