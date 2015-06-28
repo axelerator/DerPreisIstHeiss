@@ -23,8 +23,8 @@ class DerPreisIstHeiss {
 
   public static void main(String[] args) {
 
-    Price p1 = new Price(23.0f);
-    Price p2 = new Price(23.0f);
+    Price p1 = new Price(230000.01f);
+    Price p2 = new Price(230000.01f);
 
     Price p3 = new Price(p1.amount + p2.amount);
     System.out.println(p3);
@@ -34,4 +34,4 @@ class DerPreisIstHeiss {
 ```
 Ausgabe:
 ========
-46.0 €
+460000.03 €

@@ -22,8 +22,8 @@ class DerPreisIstHeiss {
 
   public static void main(String[] args) {
 
-    Price p1 = new Price(23.0f);
-    Price p2 = new Price(23.0f);
+    Price p1 = new Price(230000.01f);
+    Price p2 = new Price(230000.01f);
 
     float amountSum = p1.amount + p2.amount
     Price p3 = new Price(amountSum);
