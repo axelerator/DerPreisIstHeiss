@@ -25,6 +25,9 @@ class DerPreisIstHeiss {
     }
 
     public Price sum(Price other) {
+      if (other.currency != this.currency) {
+        throw new RuntimeException("Währungen sind nicht gleich");
+      }
       return new Price(this.amount + other.amount, this.currency);
     }
   }
@@ -37,7 +40,6 @@ class DerPreisIstHeiss {
 
     Price deuro = oneEuro.sum(oneDollar);
 
-    System.out.println(oneEuro + " equals " + oneDollar + ": " + oneEuro.equals(oneDollar));
     System.out.println(oneEuro + " + " + oneDollar + "= " + deuro);
 
   }
