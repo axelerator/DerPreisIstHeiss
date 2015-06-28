@@ -5,6 +5,10 @@ class DerPreisIstHeiss {
   static class Price {
     float amount;
 
+    Price(float amount) {
+      this.amount = amount;
+    }
+
     public String toString() {
       return amount + " €";
     }
@@ -13,11 +17,8 @@ class DerPreisIstHeiss {
 
   public static void main(String[] args) {
 
-    Price p1 = new Price();
-    p1.amount = 23.0f;
-
-    Price p2 = new Price();
-    p2.amount = 23.0f;
+    Price p1 = new Price(23.0f);
+    Price p2 = new Price(23.0f);
 
     if (p1 == p2) {
       System.out.println(p1 + " ist gleich " + p2);
