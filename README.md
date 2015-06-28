@@ -15,7 +15,8 @@ class DerPreisIstHeiss {
     }
 
     public boolean equals(Object other) {
-      return other.amount == this.amount;
+      return (other instanceof Price)
+        && ((Price)other).amount == this.amount;
     }
   }
 
@@ -33,13 +34,6 @@ class DerPreisIstHeiss {
   }
 }
 ```
-Kompilierfehler:
-================
-```
-DerPreisIstHeiss.java:17: error: cannot find symbol
-      return other.amount == this.amount;
-                  ^
-  symbol:   variable amount
-  location: variable other of type Object
-1 error
-```
+Ausgabe:
+========
+23.0 € ist gleich 23.0 €

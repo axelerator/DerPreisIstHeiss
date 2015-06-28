@@ -14,7 +14,8 @@ class DerPreisIstHeiss {
     }
 
     public boolean equals(Object other) {
-      return other.amount == this.amount;
+      return (other instanceof Price)
+        && ((Price)other).amount == this.amount;
     }
   }
 
