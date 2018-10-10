@@ -53,3 +53,4 @@ Exception in thread "main" java.lang.RuntimeException: Währungen sind nicht gle
 	at DerPreisIstHeiss$Price.sum(DerPreisIstHeiss.java:29)
 	at DerPreisIstHeiss.main(DerPreisIstHeiss.java:41)
 ```
+BLA
